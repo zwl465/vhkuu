@@ -97,4 +97,5 @@ cat <<-EOF > /etc/v2ray/config.json
 EOF
 
 # Run v2ray
+export V2RAY_VMESS_AEAD_FORCED=false
 /usr/bin/v2ray/v2ray -config=/etc/v2ray/config.json
