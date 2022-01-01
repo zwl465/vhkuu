@@ -25,7 +25,8 @@ cat <<-EOF > /etc/v2ray/config.json
                 "clients":[
                     {
                         "id":"${UUID}",
-                        "alterId":"${ALTER_ID}"
+                        "alterId":${ALTER_ID},
+                        "level":1
                     }
                 ]
             },
@@ -39,9 +40,31 @@ cat <<-EOF > /etc/v2ray/config.json
     ],
     "outbounds":[
         {
-            "protocol":"freedom"
+            "protocol":"freedom",
+            "settings":{
+
+            },
+            "tag":"allowed"
+        },
+        {
+            "protocol":"blackhole",
+            "settings":{
+
+            },
+            "tag":"blocked"
         }
-    ]
+    ],
+    "routing":{
+        "rules":[
+            {
+                "type":"field",
+                "ip":[
+                    "geoip:private"
+                ],
+                "outboundTag":"blocked"
+            }
+        ]
+    }
 }
 EOF
 
