@@ -24,47 +24,24 @@ cat <<-EOF > /etc/v2ray/config.json
             "settings":{
                 "clients":[
                     {
-                        "id":"f011c012-5f1d-418c-9494-d24d77a9d8f9",
-                        "alterId":520,
-                        "level":1
+                        "id":"${UUID}",
+                        "alterId":"${ALTER_ID}"
                     }
                 ]
             },
             "streamSettings":{
                 "network":"ws",
                 "wsSettings":{
-                    "path":"/xiaonuo"
+                    "path":"${WSPATH}"
                 }
             }
         }
     ],
     "outbounds":[
         {
-            "protocol":"freedom",
-            "settings":{
-
-            },
-            "tag":"allowed"
-        },
-        {
-            "protocol":"blackhole",
-            "settings":{
-
-            },
-            "tag":"blocked"
+            "protocol":"freedom"
         }
-    ],
-    "routing":{
-        "rules":[
-            {
-                "type":"field",
-                "ip":[
-                    "geoip:private"
-                ],
-                "outboundTag":"blocked"
-            }
-        ]
-    }
+    ]
 }
 EOF
 
