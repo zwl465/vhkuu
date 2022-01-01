@@ -11,7 +11,7 @@
 			"description": "v2ray alterId",
 			"value": "520"
 		},
-                "V2_PATH": {
+                "WSPATH": {
 			"description": "v2ray path",
 			"value": "/xiaonuo"
 		}
