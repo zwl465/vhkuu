@@ -1,0 +1,22 @@
+{
+	"name": "v2ray",
+	"description": "Deploy v2ray",
+	"keywords": ["v2ray"],
+	"env": {
+		"UUID": {
+			"description": "v2ray UUID",
+			"value": "f011c012-5f1d-418c-9494-d24d77a9d8f9"
+		},
+                "ALTER_ID": {
+			"description": "v2ray alterId",
+			"value": "520"
+		},
+                "V2_PATH": {
+			"description": "v2ray path",
+			"value": "/xiaonuo"
+		}
+	},
+	"website": "https://www.danxiaonuo.com/",
+	"repository": "https://github.com/danxiaonuo/v2ray-heroku",
+	"stack": "container"
+}
