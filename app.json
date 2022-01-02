@@ -9,11 +9,11 @@
 		},
                 "ALTER_ID": {
 			"description": "v2ray alterId",
-			"value": "520"
+			"value": "64"
 		},
                 "WSPATH": {
 			"description": "v2ray path",
-			"value": "/xiaonuo"
+			"value": "/"
 		}
 	},
 	"website": "https://www.danxiaonuo.com/",
